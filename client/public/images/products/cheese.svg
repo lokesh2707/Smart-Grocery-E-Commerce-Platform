@@ -1,0 +1,12 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cheeseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <path d="M 60 80 L 140 60 L 140 140 L 60 160 Z" fill="url(#cheeseGrad)" stroke="#DAA520" stroke-width="2"/>
+  <circle cx="85" cy="100" r="5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="110" cy="95" r="4" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="125" cy="120" r="6" fill="#FFFFFF" opacity="0.4"/>
+</svg>

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: smartgrocery-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        value: set-your-mongodb-uri-here
+        sync: false
+      - key: JWT_SECRET
+        value: your-jwt-secret-key-here
+        sync: false
+      - key: JWT_EXPIRE
+        value: 7d
+      - key: NODE_ENV
+        value: production
+      - key: CLOUD_NAME
+        value: dymblm25l
+      - key: CLOUD_API_KEY
+        value: 272257295885546
+      - key: CLOUD_API_SECRET
+        value: -RKsNSab5xT6dcYiB5TyagZHJlE

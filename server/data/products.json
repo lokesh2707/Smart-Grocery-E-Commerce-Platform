@@ -1,0 +1,220 @@
+[
+  {
+    "name": "Banana (Per Kg)",
+    "category": "Fruits",
+    "description": "Fresh ripe bananas, source of potassium.",
+    "price": 60,
+    "variants": [
+      { "name": "Per Kg", "price": 60, "stock": 200 }
+    ],
+    "image": "/images/products/banana.svg",
+    "stock": 200,
+    "searchKeywords": ["banana", "fruit", "potassium"]
+  },
+  {
+    "name": "Apple (Red Delicious) - 1 Kg",
+    "category": "Fruits",
+    "description": "Crisp and sweet red apples.",
+    "price": 180,
+    "variants": [ { "name": "1 Kg", "price": 180, "stock": 150 } ],
+    "image": "/images/products/apple.svg",
+    "stock": 150,
+    "searchKeywords": ["apple", "fruit", "red delicious"]
+  },
+  {
+    "name": "Tomato (Per Kg)",
+    "category": "Vegetables",
+    "description": "Fresh red tomatoes for cooking and salads.",
+    "price": 40,
+    "variants": [ { "name": "Per Kg", "price": 40, "stock": 300 } ],
+    "image": "/images/products/tomato.svg",
+    "stock": 300,
+    "searchKeywords": ["tomato", "vegetable", "salad"]
+  },
+  {
+    "name": "Potato (Per Kg)",
+    "category": "Vegetables",
+    "description": "Starchy potatoes for everyday cooking.",
+    "price": 30,
+    "variants": [ { "name": "Per Kg", "price": 30, "stock": 400 } ],
+    "image": "https://via.placeholder.com/300?text=Potato",
+    "stock": 400,
+    "searchKeywords": ["potato", "vegetable", "starch"]
+  },
+  {
+    "name": "Turmeric Powder (100g)",
+    "category": "Spices",
+    "description": "Ground turmeric for flavor and color.",
+    "price": 50,
+    "variants": [ { "name": "100g", "price": 50, "stock": 120 } ],
+    "image": "https://via.placeholder.com/300?text=Turmeric",
+    "stock": 120,
+    "searchKeywords": ["turmeric", "haldi", "spice"]
+  },
+  {
+    "name": "Cumin Seeds (Jeera) - 100g",
+    "category": "Spices",
+    "description": "Aromatic cumin seeds for tempering.",
+    "price": 40,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Cumin",
+    "stock": 90,
+    "searchKeywords": ["cumin", "jeera", "spice"]
+  },
+  {
+    "name": "Sunflower Oil (1 L)",
+    "category": "Oils",
+    "description": "Refined sunflower oil for cooking.",
+    "price": 220,
+    "variants": [
+      { "name": "1 L", "price": 220, "stock": 60 },
+      { "name": "500 ml", "price": 120, "stock": 120 }
+    ],
+    "image": "https://via.placeholder.com/300?text=Oil",
+    "stock": 180,
+    "searchKeywords": ["sunflower oil", "cooking oil", "oil"]
+  },
+  {
+    "name": "Almonds (Badam) - 250g",
+    "category": "Dry Fruits",
+    "description": "Premium almonds, rich in protein.",
+    "price": 350,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Almonds",
+    "stock": 80,
+    "searchKeywords": ["almonds", "badam", "dry fruits"]
+  },
+  {
+    "name": "Rice (Basmati) - 5 Kg",
+    "category": "Basics",
+    "description": "Aromatic basmati rice for everyday meals.",
+    "price": 420,
+    "variants": [
+      { "name": "5 Kg", "price": 420, "stock": 40 },
+      { "name": "1 Kg", "price": 90, "stock": 200 }
+    ],
+    "image": "/images/products/rice.svg",
+    "stock": 240,
+    "searchKeywords": ["rice", "basmati", "staple"]
+  },
+  {
+    "name": "Wheat Flour (Atta) - 5 Kg",
+    "category": "Basics",
+    "description": "Whole wheat flour for rotis and baking.",
+    "price": 280,
+    "variants": [],
+    "image": "/images/products/bread.svg",
+    "stock": 150,
+    "searchKeywords": ["atta", "wheat", "flour"]
+  },
+  {
+    "name": "Milk (Toned) - 1 L",
+    "category": "Dairy",
+    "description": "Fresh toned milk in tetra pack.",
+    "price": 60,
+    "variants": [],
+    "image": "/images/products/milk.svg",
+    "stock": 500,
+    "searchKeywords": ["milk", "dairy", "toned"]
+  },
+  {
+    "name": "Paneer (Cottage Cheese) - 200g",
+    "category": "Dairy",
+    "description": "Fresh paneer for curries and snacks.",
+    "price": 110,
+    "variants": [],
+    "image": "/images/products/cheese.svg",
+    "stock": 120,
+    "searchKeywords": ["paneer", "cottage cheese", "dairy"]
+  },
+  {
+    "name": "Tea (Assam) - 250g",
+    "category": "Beverages",
+    "description": "Strong Assam tea leaves for brewing.",
+    "price": 150,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Tea",
+    "stock": 200,
+    "searchKeywords": ["tea", "assam", "beverage"]
+  },
+  {
+    "name": "Coffee (Instant) - 100g",
+    "category": "Beverages",
+    "description": "Instant coffee powder for quick brew.",
+    "price": 180,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Coffee",
+    "stock": 140,
+    "searchKeywords": ["coffee", "instant", "beverage"]
+  },
+  {
+    "name": "Sugar (Refined) - 1 Kg",
+    "category": "Basics",
+    "description": "Pure refined sugar for daily use.",
+    "price": 45,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Sugar",
+    "stock": 300,
+    "searchKeywords": ["sugar", "refined", "sweetener"]
+  },
+  {
+    "name": "Salt (Iodised) - 1 Kg",
+    "category": "Basics",
+    "description": "Iodised salt for cooking.",
+    "price": 25,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Salt",
+    "stock": 350,
+    "searchKeywords": ["salt", "iodised", "condiment"]
+  },
+  {
+    "name": "Cashews (Kaju) - 200g",
+    "category": "Dry Fruits",
+    "description": "Crunchy cashews for snacking.",
+    "price": 420,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Cashews",
+    "stock": 60,
+    "searchKeywords": ["cashews", "kaju", "dry fruits"]
+  },
+  {
+    "name": "Garlic (Per Kg)",
+    "category": "Vegetables",
+    "description": "Fresh garlic bulbs for seasoning.",
+    "price": 120,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Garlic",
+    "stock": 100,
+    "searchKeywords": ["garlic", "vegetable", "seasoning"]
+  },
+  {
+    "name": "Olive Oil (Extra Virgin) - 500 ml",
+    "category": "Oils",
+    "description": "Cold pressed extra virgin olive oil.",
+    "price": 850,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Oil",
+    "stock": 30,
+    "searchKeywords": ["olive oil", "extra virgin", "oil"]
+  },
+  {
+    "name": "Honey (Pure) - 250g",
+    "category": "Other",
+    "description": "Natural pure honey for health and cooking.",
+    "price": 240,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Honey",
+    "stock": 70,
+    "searchKeywords": ["honey", "natural", "sweetener"]
+  },
+  {
+    "name": "Groundnut (Peanuts) - 500g",
+    "category": "Dry Fruits",
+    "description": "Roasted groundnuts for snacking and cooking.",
+    "price": 90,
+    "variants": [],
+    "image": "https://via.placeholder.com/300?text=Peanuts",
+    "stock": 180,
+    "searchKeywords": ["peanuts", "groundnut", "dry fruits"]
+  }
+]
