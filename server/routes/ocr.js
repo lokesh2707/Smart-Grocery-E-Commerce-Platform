@@ -249,9 +249,9 @@ router.post('/match', protect, async (req, res) => {
     // Configure Fuse.js for fuzzy search
     const fuseOptions = {
       keys: ['name', 'searchKeywords'],
-      threshold: 0.3, // Stricter matching (was 0.4)
+      threshold: 0.6, // More lenient matching (allows more products to match)
       includeScore: true,
-      minMatchCharLength: 3
+      minMatchCharLength: 2
     };
 
     const fuse = new Fuse(products, fuseOptions);
@@ -270,8 +270,8 @@ router.post('/match', protect, async (req, res) => {
       // Search for matching products - get top 3 alternatives
       const searchResults = fuse.search(itemName).slice(0, 3);
 
-      if (searchResults.length > 0 && searchResults[0].score < 0.6) {
-        // HIGH CONFIDENCE MATCH - use primary match
+      if (searchResults.length > 0 && searchResults[0].score < 0.7) {
+        // HIGH CONFIDENCE MATCH - use primary match (score < 0.7 is good)
         const product = searchResults[0].item;
         let price = product.price;
         let variant = 'default';

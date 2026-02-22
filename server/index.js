@@ -25,10 +25,7 @@ app.use('/api/upload', require('./routes/upload'));
 
 // Database connection
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/smart-grocery', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/smart-grocery')
   .then(async () => {
     console.log('✅ MongoDB Connected');
 

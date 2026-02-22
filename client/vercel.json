@@ -1,8 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "build",
-  "envPrefix": "REACT_APP_",
-  "env": {
-    "REACT_APP_API_URL": "@mongodb_uri"
-  }
+  "outputDirectory": "build"
 }

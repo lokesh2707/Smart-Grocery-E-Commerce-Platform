@@ -56,24 +56,17 @@ const Home = () => {
 
   const handleOCRConfirm = async (confirmedItems) => {
     try {
-      // Get existing cart items from localStorage or cart
-      const existingItems = localStorage.getItem("cartItems");
-      const cartItems = existingItems ? JSON.parse(existingItems) : [];
-
-      // Merge confirmed items with existing cart
-      const updatedCart = [...cartItems];
+      console.log('OCR Confirmed Items:', confirmedItems); // Debug log
       
-      for (const item of confirmedItems) {
-        const existingItem = updatedCart.find(ci => ci.productId === item.productId);
-        
-        if (existingItem) {
-          existingItem.quantity += item.quantity;
-        } else {
-          updatedCart.push(item);
-        }
+      if (!confirmedItems || confirmedItems.length === 0) {
+        toast.error('No items to add to cart');
+        return;
       }
 
-      localStorage.setItem("cartItems", JSON.stringify(updatedCart));
+      // Save to localStorage with the key that Cart.js expects
+      console.log('Saving to localStorage with key "ocrMatchedItems"');
+      localStorage.setItem("ocrMatchedItems", JSON.stringify(confirmedItems));
+      console.log('Updated cart:', confirmedItems); // Debug log
       
       setShowConfirmation(false);
       setFile(null);
@@ -82,8 +75,8 @@ const Home = () => {
       // Redirect to cart after a short delay
       setTimeout(() => navigate("/cart"), 1000);
     } catch (error) {
-      toast.error("Failed to add items to cart");
-      console.error(error);
+      console.error('Error in handleOCRConfirm:', error); // Debug log
+      toast.error('Failed to add items to cart: ' + error.message);
     }
   };
 
