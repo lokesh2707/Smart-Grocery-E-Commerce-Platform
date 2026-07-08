@@ -16,16 +16,21 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src="/images/logo.svg" alt="Smart Grocery" className="navbar-logo-img" />
-          Smart Grocery
+          <span className="navbar-brand-mark">S</span>
+          <span className="navbar-brand-copy">
+            <strong>SmartCart</strong>
+            <small>AI Grocery</small>
+          </span>
         </Link>
-        
+
         <div className="navbar-menu">
           <Link to="/products" className="navbar-link">Products</Link>
-          
+
           {user ? (
             <>
               {user.role !== 'admin' && <Link to="/cart" className="navbar-link">Cart</Link>}
+              {user.role !== 'admin' && <Link to="/orders" className="navbar-link">Orders</Link>}
+              {user.role !== 'admin' && <Link to="/profile" className="navbar-link">Profile</Link>}
               {user.role === 'admin' ? (
                 <Link to="/admin/dashboard" className="navbar-link">Admin</Link>
               ) : null}

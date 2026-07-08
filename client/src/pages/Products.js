@@ -48,10 +48,24 @@ const Products = () => {
 
   return (
     <div className="products-page">
-
-      {/* HEADER SECTION */}
       <div className="products-header">
-        <h1>Shop Groceries</h1>
+        <div className="products-hero-card">
+          <div>
+            <span className="section-pill">Fresh picks for every trip</span>
+            <h1>Shop groceries with AI-powered ease.</h1>
+            <p>Browse essentials, compare options, and build your basket quickly.</p>
+          </div>
+          <div className="hero-metrics">
+            <div>
+              <strong>24/7</strong>
+              <span>Available</span>
+            </div>
+            <div>
+              <strong>Free</strong>
+              <span>delivery over ₹499</span>
+            </div>
+          </div>
+        </div>
 
         <div className="filters-bar">
           <div className="search-box">
@@ -76,20 +90,22 @@ const Products = () => {
         </div>
       </div>
 
-      {/* GRID */}
       {loading ? (
-        <div className="loading">Loading products...</div>
+        <div className="products-grid">
+          {Array.from({ length: 6 }).map((_, idx) => (
+            <div key={idx} className="product-card skeleton-card" />
+          ))}
+        </div>
       ) : (
         <div className="products-grid">
           {products.length === 0 ? (
-            <div className="no-products">No items found</div>
+            <div className="products-empty">
+              <h2>No items found</h2>
+              <p>Try another search or category to discover more products.</p>
+            </div>
           ) : (
             products.map((product) => (
-              <Link
-                key={product._id}
-                to={`/products/${product._id}`}
-                className="product-card"
-              >
+              <Link key={product._id} to={`/products/${product._id}`} className="product-card">
                 <div className="product-img">
                   {product.image ? (
                     <img src={product.image} alt={product.name} />
@@ -105,9 +121,7 @@ const Products = () => {
                   <div className="price">₹{product.price.toFixed(2)}</div>
 
                   {product.variants && product.variants.length > 0 && (
-                    <span className="variant-tag">
-                      {product.variants.length} variants
-                    </span>
+                    <span className="variant-tag">{product.variants.length} variants</span>
                   )}
                 </div>
               </Link>

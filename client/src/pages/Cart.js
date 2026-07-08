@@ -86,7 +86,7 @@ const Cart = () => {
 
   if (!user) {
     return (
-      <div className="cart-empty-container">
+      <div className="cart-empty-container auth-empty-state">
         <h2>Please login to view your cart</h2>
         <button onClick={() => navigate("/login")} className="cart-btn-primary">
           Login
@@ -95,25 +95,29 @@ const Cart = () => {
     );
   }
 
-  if (loading) return <div className="cart-loading">Loading...</div>;
+  if (loading) return <div className="cart-loading">Loading your cart...</div>;
 
   return (
     <div className="cart-page">
-
-      <h1>Your Cart</h1>
+      <div className="cart-hero">
+        <div>
+          <span className="section-pill">Basket summary</span>
+          <h1>Your Cart</h1>
+          <p>Review your groceries and move quickly to checkout.</p>
+        </div>
+        <div className="cart-hero-badge">Free delivery over ₹499</div>
+      </div>
 
       {cart.items.length === 0 ? (
         <div className="cart-empty-container">
           <h2>Your cart is empty</h2>
-          <button
-            onClick={() => navigate("/products")}
-            className="cart-btn-primary"
-          >
+          <p>Add fresh essentials and come back here anytime.</p>
+          <button onClick={() => navigate("/products")} className="cart-btn-primary">
             Start Shopping
           </button>
         </div>
       ) : (
-        <>
+        <div className="cart-layout">
           <div className="cart-items-list">
             {cart.items.map((item, index) => (
               <div key={index} className="cart-item-card">
@@ -135,31 +139,14 @@ const Cart = () => {
                   <p className="cart-price">₹{item.price.toFixed(2)}</p>
 
                   <div className="cart-qty-controls">
-                    <button
-                      onClick={() =>
-                        updateQuantity(item.productId, item.variant, item.quantity - 1)
-                      }
-                    >
-                      -
-                    </button>
+                    <button onClick={() => updateQuantity(item.productId, item.variant, item.quantity - 1)}>-</button>
                     <span>{item.quantity}</span>
-                    <button
-                      onClick={() =>
-                        updateQuantity(item.productId, item.variant, item.quantity + 1)
-                      }
-                    >
-                      +
-                    </button>
+                    <button onClick={() => updateQuantity(item.productId, item.variant, item.quantity + 1)}>+</button>
                   </div>
 
-                  <p className="cart-item-total">
-                    ₹{item.total.toFixed(2)}
-                  </p>
+                  <p className="cart-item-total">₹{item.total.toFixed(2)}</p>
 
-                  <button
-                    className="cart-remove-btn"
-                    onClick={() => removeItem(item.productId, item.variant)}
-                  >
+                  <button className="cart-remove-btn" onClick={() => removeItem(item.productId, item.variant)}>
                     Remove
                   </button>
                 </div>
@@ -167,23 +154,25 @@ const Cart = () => {
             ))}
           </div>
 
-          {/* Bottom summary */}
-          <div className="cart-summary-bar">
-            <div>
-              <p className="summary-total-label">Total</p>
-              <p className="summary-total-value">
-                ₹{(cart.total * 1.05).toFixed(2)}
-              </p>
+          <div className="cart-summary-card">
+            <h3>Order Summary</h3>
+            <div className="summary-row">
+              <span>Subtotal</span>
+              <strong>₹{cart.total.toFixed(2)}</strong>
             </div>
-
-            <button
-              className="summary-checkout-btn"
-              onClick={() => navigate("/checkout")}
-            >
-              Checkout →
+            <div className="summary-row">
+              <span>Delivery</span>
+              <strong>Free</strong>
+            </div>
+            <div className="summary-row total-row">
+              <span>Total</span>
+              <strong>₹{(cart.total * 1.05).toFixed(2)}</strong>
+            </div>
+            <button className="summary-checkout-btn" onClick={() => navigate("/checkout")}>
+              Proceed to Checkout
             </button>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

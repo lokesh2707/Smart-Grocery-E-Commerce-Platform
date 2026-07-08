@@ -97,70 +97,131 @@ const Home = () => {
         />
       )}
 
-      {/* HERO SECTION */}
       <section className="hero-section">
-        
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <h1>Fresh, Fast & Delivered to Your Doorstep</h1>
-          <p>Shop groceries, daily needs & essentials — all in one place.</p>
+          <span className="hero-badge">AI-powered grocery experience</span>
+          <h1>Shop smarter with instant list matching and fresh essentials.</h1>
+          <p>From handwritten lists to doorstep delivery, SmartCart AI makes everyday shopping feel effortless.</p>
 
-          <button onClick={() => navigate("/products")} className="hero-button">
-            Start Shopping
-          </button>
+          <div className="hero-actions">
+            <button onClick={() => navigate("/products")} className="hero-button">
+              Start Shopping
+            </button>
+            <button onClick={() => navigate("/products")} className="hero-button secondary">
+              Browse Products
+            </button>
+          </div>
+
+          <div className="hero-metrics">
+            <div className="hero-highlight-card">
+              <strong>2 min</strong>
+              <span>list-to-cart flow</span>
+            </div>
+            <div className="hero-highlight-card">
+              <strong>99% match</strong>
+              <span>smart product accuracy</span>
+            </div>
+            <div className="hero-highlight-card">
+              <strong>Fast delivery</strong>
+              <span>same-day availability</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* FEATURES */}
-      <div className="features-section">
+      <section className="value-section">
+        <div className="section-heading">
+          <span className="section-kicker">Why SmartCart AI</span>
+          <h2>Everything you need for a faster, calmer grocery run.</h2>
+        </div>
+
+        <div className="value-grid">
+          <div className="value-card">
+            <div className="feature-icon">📸</div>
+            <h3>AI Shopping List</h3>
+            <p>Upload a handwritten list and let AI auto-detect and match groceries.</p>
+          </div>
+
+          <div className="value-card">
+            <div className="feature-icon">🛒</div>
+            <h3>Streamlined Cart</h3>
+            <p>Browse essentials and checkout in a few taps without friction.</p>
+          </div>
+
+          <div className="value-card">
+            <div className="feature-icon">📄</div>
+            <h3>Instant Receipts</h3>
+            <p>Save every order with clean summaries and downloadable receipts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="features-section">
         <div className="feature-card">
-          <div className="feature-icon">📸</div>
-          <h3>AI Shopping List</h3>
-          <p>Upload your handwritten list and let AI auto-add items to cart.</p>
+          <div className="feature-icon">⚡</div>
+          <h3>Smart Matching</h3>
+          <p>Find the closest products instantly and reduce decision fatigue.</p>
         </div>
 
         <div className="feature-card">
-          <div className="feature-icon">🛒</div>
-          <h3>Easy Shopping</h3>
-          <p>Explore products across categories with smooth navigation.</p>
+          <div className="feature-icon">🥬</div>
+          <h3>Fresh Picks</h3>
+          <p>Discover everyday favorites with a polished shopping experience.</p>
         </div>
 
         <div className="feature-card">
-          <div className="feature-icon">📄</div>
-          <h3>Instant Receipts</h3>
-          <p>Download PDF receipts for all your orders instantly.</p>
+          <div className="feature-icon">🧠</div>
+          <h3>Personalized Help</h3>
+          <p>Get recommendations that adapt to your routine and budget.</p>
         </div>
-      </div>
+      </section>
 
-      {/* OCR UPLOAD */}
-      <div className="ocr-section">
+      <section className="categories-section">
+        <div className="section-heading">
+          <span className="section-kicker">Popular categories</span>
+          <h2>Find staples, snacks, and fresh picks in one polished place.</h2>
+        </div>
+
+        <div className="category-grid">
+          <div className="category-card">Fresh Produce</div>
+          <div className="category-card">Pantry Essentials</div>
+          <div className="category-card">Beverages</div>
+          <div className="category-card">Household</div>
+        </div>
+      </section>
+
+      <section className="ocr-section">
         <h2>Upload Your Shopping List</h2>
         <p>Image, PDF or Word — we’ll analyze and match your groceries automatically.</p>
 
         <div className="upload-area">
-          <input
-            type="file"
-            id="file-upload"
-            onChange={handleFileChange}
-            accept="image/*,.pdf,.doc,.docx"
-            hidden
-          />
-          <label htmlFor="file-upload" className="upload-label">
-            {file ? file.name : "Choose Image or PDF"}
-          </label>
+          <div className="upload-card">
+            <input
+              type="file"
+              id="file-upload"
+              onChange={handleFileChange}
+              accept="image/*,.pdf,.doc,.docx"
+              hidden
+            />
+            <label htmlFor="file-upload" className="upload-label">
+              {file ? file.name : "Choose Image or PDF"}
+            </label>
+            <div className="upload-hint">PNG, JPG, PDF, and DOCX files supported</div>
 
-          {file && (
-            <button
-              onClick={handleOCRUpload}
-              disabled={uploading}
-              className="btn-primary"
-            >
-              {uploading ? "Processing..." : "Process & Add to Cart"}
-            </button>
-          )}
+            {file && (
+              <button
+                onClick={handleOCRUpload}
+                disabled={uploading}
+                className="btn-primary"
+              >
+                {uploading ? "Processing..." : "Process & Add to Cart"}
+              </button>
+            )}
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

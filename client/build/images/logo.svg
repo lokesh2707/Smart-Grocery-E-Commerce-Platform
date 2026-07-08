@@ -1,0 +1,24 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0052A3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#logoGrad)" />
+  
+  <!-- Shopping bag shape -->
+  <g fill="white">
+    <!-- Bag body -->
+    <path d="M 70 60 L 70 80 L 60 140 Q 60 150 70 150 L 130 150 Q 140 150 140 140 L 130 80 L 130 60 Z" fill="white"/>
+    <!-- Handles -->
+    <path d="M 75 60 Q 75 40 100 40 Q 125 40 125 60" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <!-- Decoration lines -->
+    <line x1="85" y1="100" x2="115" y2="100" stroke="#0066CC" stroke-width="3" stroke-linecap="round"/>
+    <line x1="85" y1="120" x2="115" y2="120" stroke="#0066CC" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text indicator -->
+  <text x="100" y="185" font-family="Poppins, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">SMARTAI</text>
+</svg>

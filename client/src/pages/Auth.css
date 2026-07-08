@@ -8,13 +8,14 @@
 }
 
 .auth-container {
-  background: white;
-  padding: 3rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-lg);
+  background: rgba(255,255,255,0.96);
+  padding: 2.4rem;
+  border-radius: 24px;
+  box-shadow: var(--shadow-md);
   width: 100%;
-  max-width: 420px;
+  max-width: 430px;
   border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
 }
 
 .auth-container h1 {
@@ -29,17 +30,17 @@
 .auth-container > p {
   text-align: center;
   color: var(--text-light);
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
   font-size: 0.95rem;
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.55rem;
   color: var(--text-dark);
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -48,40 +49,39 @@
 
 .form-group input {
   width: 100%;
-  padding: 0.875rem 1rem;
+  padding: 0.9rem 1rem;
   border: 1.5px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
   transition: var(--transition);
-  background: var(--bg-lighter);
+  background: var(--surface-soft);
 }
 
 .form-group input:focus {
   border-color: var(--primary-color);
   background: white;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  box-shadow: 0 0 0 4px rgba(23, 105, 255, 0.12);
 }
 
 .auth-button {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--primary-color) 0%, #0052A3 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
   color: white;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
-  transition: var(--transition);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 10px 24px rgba(23, 105, 255, 0.2);
 }
 
 .auth-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 26px rgba(23, 105, 255, 0.24);
 }
 
 .auth-button:disabled {
-  opacity: 0.5;
+  opacity: 0.6;
   cursor: not-allowed;
 }
 
@@ -94,7 +94,6 @@
 .auth-link a {
   color: var(--primary-color);
   font-weight: 600;
-  transition: var(--transition);
 }
 
 .auth-link a:hover {

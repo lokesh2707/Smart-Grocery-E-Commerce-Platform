@@ -1,0 +1,13 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="meatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CD5C5C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#meatGrad)"/>
+  <ellipse cx="80" cy="100" rx="35" ry="45" fill="#DAA520" opacity="0.9"/>
+  <path d="M 120 70 L 145 60 L 140 100 L 120 110 Z" fill="#DAA520" opacity="0.9"/>
+  <circle cx="95" cy="85" r="6" fill="#FFFFFF" opacity="0.4"/>
+  <text x="100" y="180" font-family="Poppins, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">MEAT</text>
+</svg>

@@ -11,6 +11,7 @@ import ProductDetail from './pages/ProductDetail';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Orders from './pages/Orders';
+import Profile from './pages/Profile';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
             <Route path="/orders" element={<PrivateRoute><Orders /></PrivateRoute>} />
             <Route path="/orders/:id" element={<PrivateRoute><Orders /></PrivateRoute>} />
+            <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
             
             {/* Admin Routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
@@ -55,7 +57,7 @@ function App() {
             
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-          <ToastContainer position="top-right" autoClose={3000} />
+          <ToastContainer position="top-right" autoClose={3000} theme="colored" />
         </div>
       </Router>
     </AuthProvider>
